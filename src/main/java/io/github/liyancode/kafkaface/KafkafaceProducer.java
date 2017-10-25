@@ -13,7 +13,7 @@ import java.util.Properties;
  * Created by {Li,Yan} on 10/24/17.
  */
 public class KafkafaceProducer{
-    static Logger LOGGER = org.apache.logging.log4j.LogManager.getLogger(KafkafaceProducer.class.getName());
+    private static Logger LOGGER = org.apache.logging.log4j.LogManager.getLogger(KafkafaceProducer.class.getName());
 
     private Producer<String, String> producer;
     private final String keySerializerClassDefault="org.apache.kafka.common.serialization.StringSerializer";
@@ -52,7 +52,7 @@ public class KafkafaceProducer{
                     serverName,serverPort,keySerializerClass,valueSerializerClass);
             this.startAt= Calendar.getInstance().getTime();
         }catch(Exception e){
-            LOGGER.error(e);
+            LOGGER.error(e.getStackTrace());
             return;
         }
 
