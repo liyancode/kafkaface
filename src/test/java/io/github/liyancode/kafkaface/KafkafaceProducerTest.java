@@ -11,7 +11,7 @@ import java.util.Calendar;
 public class KafkafaceProducerTest {
     private final String testTopic="KafkafaceProducerTest_topic";
     @Test
-//    @Ignore
+    @Ignore
     public void testProduce(){
         KafkafaceProducer kp=new KafkafaceProducer("localhost","9092","","");
         kp.produce(testTopic,"key_01", Calendar.getInstance().toString()+"_testmessage");
