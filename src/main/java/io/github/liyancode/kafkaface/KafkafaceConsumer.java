@@ -1,14 +1,11 @@
 package io.github.liyancode.kafkaface;
 
 import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by {Li,Yan} on 10/24/17.
